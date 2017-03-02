@@ -11,6 +11,10 @@ import Agent
 
 if __name__ == "__main__":
     args = sys.argv # reading filename from command-line arguments
+    argc = len(args)
+    if(argc != 5):
+        print('usage : $ python', args[0], 'maze_map(.txt file) episode(number) reward(0-1 float) punishment(0-1 float)')
+        exit()
     n_episode = int(args[2]) # the number of episodes
     reward = float(args[3]) # reward
     punishment = float(args[4]) # punishment
